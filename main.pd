@@ -1,4 +1,4 @@
-#N canvas 144 94 1474 797 10;
+#N canvas 142 106 1474 797 10;
 #X declare -path abs;
 #X declare -path abs/Chords-Roll;
 #X declare -path abs/grelot_sounds;
@@ -8,7 +8,7 @@
 #X declare -path abs/instructions_sounds;
 #X obj 146 133 s maxVolume;
 #X text 121 69 CONFIG SOUND DEVICES VOLUME;
-#N canvas 0 23 257 177 SDmaxVol 0;
+#N canvas 0 50 257 177 SDmaxVol 0;
 #X obj 29 100 /;
 #X msg 29 80 1;
 #X floatatom 80 123 5 0 0 0 - - -, f 5;
@@ -30,7 +30,7 @@
 #X obj 33 650 declare -path abs;
 #X obj 40 218 r objectId;
 #X obj 40 276 route 0 1 2 3;
-#N canvas 965 23 744 725 receiveGameEngine2 0;
+#N canvas 742 176 744 725 receiveGameEngine2 1;
 #X obj 29 69 oscparse;
 #X obj 29 44 netreceive -u -b 9002;
 #X obj 403 364 f;
@@ -119,10 +119,10 @@
 #X obj 33 672 declare -path abs/Chords-Roll;
 #X obj 465 747 dac~;
 #X obj 40 351 SD-grelotv2;
-#N canvas 272 90 1055 802 instructionsPlayer 1;
+#N canvas 269 108 1087 807 instructionsPlayer 1;
 #X obj 543 64 loadbang;
 #X msg 613 206 disconnect;
-#N canvas 921 55 759 551 Rpi_sendOSC 0;
+#N canvas 409 199 759 551 Rpi_sendOSC 1;
 #X obj 33 252 netsend -u -b;
 #X obj 63 189 list prepend send;
 #X obj 63 214 list trim;
@@ -133,12 +133,14 @@
 -1;
 #X text 31 44 SOUNDDEVICE0;
 #X obj 64 141 oscformat callback;
+#X msg 330 149 symbol test;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
 #X connect 4 0 0 0;
 #X connect 4 0 6 0;
 #X connect 5 0 8 0;
 #X connect 8 0 1 0;
+#X connect 9 0 8 0;
 #X restore 544 270 pd Rpi_sendOSC;
 #X msg 554 158 connect localhost 9001;
 #X obj 31 55 loadbang;
@@ -190,7 +192,6 @@
 #X msg 637 396 symbol abs/instructions_sounds/000_generique_aToiDeJouer.WAV
 ;
 #X msg 390 704 clear;
-#X obj 194 752 pipe 500;
 #X obj 390 681 r \$0-fileURL;
 #X connect 0 0 40 0;
 #X connect 1 0 2 0;
@@ -206,7 +207,8 @@
 #X connect 15 1 18 0;
 #X connect 15 1 16 0;
 #X connect 16 0 23 0;
-#X connect 16 0 47 0;
+#X connect 16 0 34 0;
+#X connect 16 0 26 0;
 #X connect 19 0 15 0;
 #X connect 20 0 15 0;
 #X connect 22 0 19 0;
@@ -224,10 +226,7 @@
 #X connect 40 0 2 0;
 #X connect 43 0 2 1;
 #X connect 45 0 44 0;
-#X connect 46 0 47 0;
-#X connect 47 0 34 0;
-#X connect 47 0 26 0;
-#X connect 48 0 46 0;
+#X connect 47 0 46 0;
 #X restore 887 49 pd instructionsPlayer;
 #X obj 33 694 declare -path abs/grelot_sounds;
 #X obj 176 386 SD-ocarinav2;
