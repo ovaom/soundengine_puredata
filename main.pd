@@ -30,7 +30,7 @@
 #X obj 33 650 declare -path abs;
 #X obj 40 218 r objectId;
 #X obj 40 276 route 0 1 2 3;
-#N canvas 742 176 744 725 receiveGameEngine2 1;
+#N canvas 742 176 744 725 receiveGameEngine2 0;
 #X obj 29 69 oscparse;
 #X obj 29 44 netreceive -u -b 9002;
 #X obj 403 364 f;
@@ -119,10 +119,10 @@
 #X obj 33 672 declare -path abs/Chords-Roll;
 #X obj 465 747 dac~;
 #X obj 40 351 SD-grelotv2;
-#N canvas 269 108 1087 807 instructionsPlayer 1;
+#N canvas 269 108 1087 807 instructionsPlayer 0;
 #X obj 543 64 loadbang;
 #X msg 613 206 disconnect;
-#N canvas 409 199 759 551 Rpi_sendOSC 1;
+#N canvas 409 199 759 551 Rpi_sendOSC 0;
 #X obj 33 252 netsend -u -b;
 #X obj 63 189 list prepend send;
 #X obj 63 214 list trim;
@@ -272,7 +272,7 @@
 #X msg 216 16 1;
 #X obj 887 128 s~ \$0-soundInstructions;
 #X msg 847 363 1;
-#X obj 367 634 *~ 0.5;
+#X obj 392 618 *~ 0.5;
 #X obj 331 554 line;
 #X obj 580 589 line;
 #X msg 331 531 \$1 200;
