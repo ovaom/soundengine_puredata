@@ -1,4 +1,4 @@
-#N canvas 181 23 1653 961 10;
+#N canvas 27 23 1653 961 10;
 #X obj 472 26 inlet datas;
 #X obj 245 490 valueChanged;
 #X obj 245 467 spigot 0;
@@ -149,8 +149,8 @@
 #X obj 1129 761 tabread4~ ocarina-array4;
 #X obj 1319 760 tabread4~ ocarina-array5;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array ocarina-array2 529200 float 2;
-#X coords 0 1 529200 -1 200 140 1;
+#X array ocarina-array2 1.0584e+06 float 2;
+#X coords 0 1 1.0584e+06 -1 200 140 1;
 #X restore 494 215 graph;
 #N canvas 0 22 450 278 (subpatch) 0;
 #X array ocarina-array3 1.0584e+06 float 2;
@@ -171,7 +171,7 @@ ocarina_sounds/voxpitchMinus12.wav \; ocarina-readfile3 ocarina_sounds/voxpitchM
 \; ocarina-readfile4 ocarina_sounds/voxpitchPlus5.wav \; ocarina-readfile5
 ocarina_sounds/voxpitchPlus7.wav \;;
 #X obj 80 479 print new state;
-#X obj -19 764 r \$0-state;
+#X obj -19 764 r \$0-on;
 #X connect 0 0 26 0;
 #X connect 1 0 69 0;
 #X connect 1 0 73 0;
