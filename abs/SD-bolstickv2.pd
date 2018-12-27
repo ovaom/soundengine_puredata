@@ -91,11 +91,11 @@
 #X text 428 161 barometer;
 #X text 226 157 joystick x;
 #X text 324 157 joystick y;
-#X msg 928 418 open bolstick_sounds/percu/Slice\$1.wav;
-#X msg 125 518 read bolstick_sounds/sequencePercu.txt;
+#X msg 928 418 open bolstick_sounds/bolstick2/Slice\$1.wav;
+#X msg 125 518 read bolstick_sounds/sequencebolstick2.txt;
 #X obj 1085 46 r \$0-param2;
-#X obj 481 306 r notes_seq_percu;
-#X obj 503 341 print notes_seq_percu;
+#X obj 481 306 r notes_seq_bolstick2;
+#X obj 503 341 print notes_seq_bolstick2;
 #X obj 914 119 hsl 100 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
 #X text 923 96 REVERB;
