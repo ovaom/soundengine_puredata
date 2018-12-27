@@ -1,16 +1,16 @@
-#N canvas 163 76 1680 908 10;
+#N canvas 0 23 1619 938 10;
 #X text 908 163 ON;
 #X text 843 163 OFF;
 #X obj 887 162 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 821 163 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 1001 130 hsl 100 15 127 60 0 0 empty empty empty -2 -8 0 10
+#X obj 1015 198 hsl 100 15 127 60 0 0 empty empty empty -2 -8 0 10
 -262144 -1 -1 0 1;
-#X floatatom 1109 131 5 0 0 0 - - -, f 5;
-#X obj 1177 131 hsl 100 15 0 50 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 6300 1;
-#X floatatom 1287 132 5 0 0 0 - - -, f 5;
+#X floatatom 1123 199 5 0 0 0 - - -, f 5;
+#X obj 1191 199 hsl 100 15 0 50 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 1301 200 5 0 0 0 - - -, f 5;
 #X text 820 19 HARDWARE CONTROLS;
 #X text 48 22 INIT;
 #X obj 309 36 inlet datas;
@@ -21,8 +21,8 @@
 #X obj 481 99 pipe 10;
 #X obj 570 99 pipe 10;
 #X obj 570 131 s \$0-param1;
-#X obj 998 53 r \$0-param0;
-#X obj 1174 52 r \$0-param1;
+#X obj 1012 53 r \$0-param0;
+#X obj 1188 52 r \$0-param1;
 #X obj 822 51 r \$0-state;
 #X obj 822 136 route 0 1;
 #X obj 821 189 s \$0-off;
@@ -34,10 +34,10 @@
 #X text 580 157 button1;
 #X obj 50 48 loadbang;
 #X msg 50 79 \; corail-readfile1 corail.wav \;;
-#X obj 1347 131 hsl 100 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+#X obj 1361 199 hsl 100 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
-#X floatatom 1457 132 5 0 0 0 - - -, f 5;
-#X obj 998 155 s \$0-lowpass;
+#X floatatom 1471 160 5 0 0 0 - - -, f 5;
+#X obj 1012 223 s \$0-lowpass;
 #X obj 37 585 /;
 #X obj 37 687 *~ 0;
 #X obj 37 661 phasor~ 0;
@@ -65,80 +65,86 @@
 #X msg 257 362 read -resize \$1 corail-array1;
 #X obj 37 753 tabread4~ corail-array1;
 #X text 32 474 READ ARRAY;
-#X obj 1147 422 noise~;
-#X obj 934 522 +~;
-#X text 1191 308 NOISE;
-#X obj 1147 490 *~;
-#X obj 1217 404 f;
-#X obj 1380 368 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 788 415 noise~;
+#X obj 575 515 +~;
+#X text 832 301 NOISE;
+#X obj 788 483 *~;
+#X obj 858 397 f;
+#X obj 1021 361 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 935 313 r~ \$0-audio;
-#X obj 1217 345 r \$0-noiseVal;
-#X obj 933 867 outlet~;
-#X msg 1333 448 0;
+#X obj 576 306 r~ \$0-audio;
+#X obj 858 338 r \$0-noiseVal;
+#X obj 574 860 outlet~;
+#X msg 974 441 0;
 #X msg 139 637 0;
-#X obj 1344 52 r \$0-param2;
+#X obj 1358 52 r \$0-param2;
 #X obj 309 66 unpack 0 0 0 0 0 0;
-#X text 1215 513 reduce noise volume;
-#X obj 1345 156 s \$0-noiseVal;
-#X obj 1373 448 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X text 856 506 reduce noise volume;
+#X obj 1359 224 s \$0-noiseVal;
+#X obj 1014 441 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 1337 344 r \$0-on;
-#X floatatom 1251 407 5 0 0 0 - - -, f 5;
-#X obj 1217 491 * 0.05;
-#X obj 1333 421 r \$0-off;
+#X obj 978 337 r \$0-on;
+#X floatatom 892 400 5 0 0 0 - - -, f 5;
+#X obj 858 484 * 0.05;
+#X obj 974 414 r \$0-off;
 #X obj 310 101 pipe 15;
-#X text 1179 637 q;
-#X floatatom 1158 656 5 0 0 0 - - -, f 5;
-#X obj 997 644 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+#X text 820 630 q;
+#X floatatom 799 649 5 0 0 0 - - -, f 5;
+#X obj 638 637 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 12700 1;
-#X obj 994 665 mtof~;
-#X obj 994 617 r \$0-lowpass;
-#X obj 934 695 vcf~ 10;
-#X obj 998 81 m_scale 0 1 127 60;
-#X obj 654 752 pack 0 1000;
-#X obj 654 774 line~;
-#X obj 933 839 delread4~ \$0-del_example;
-#X obj 934 730 delwrite~ \$0-del_example 1000;
-#X floatatom 654 651 5 0 0 0 - - -, f 5;
-#X obj 681 440 osc~ 1;
-#X obj 681 417 * 0.01;
-#X floatatom 681 398 5 0 0 0 - - -, f 5;
-#X obj 681 487 *~ 1;
-#X floatatom 782 454 5 0 0 0 - - -, f 5;
-#X obj 681 512 snapshot~;
-#X obj 564 482 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 635 658 mtof~;
+#X obj 635 610 r \$0-lowpass;
+#X obj 575 688 vcf~ 10;
+#X obj 1012 149 m_scale 0 1 127 60;
+#X obj 1164 745 pack 0 1000;
+#X obj 1164 767 line~;
+#X obj 574 832 delread4~ \$0-del_example;
+#X obj 575 723 delwrite~ \$0-del_example 1000;
+#X floatatom 1164 644 5 0 0 0 - - -, f 5;
+#X obj 1301 463 osc~ 1;
+#X obj 1301 440 * 0.01;
+#X floatatom 1301 421 5 0 0 0 - - -, f 5;
+#X obj 1301 510 *~ 1;
+#X floatatom 1395 463 5 0 0 0 - - -, f 5;
+#X obj 1301 535 snapshot~;
+#X obj 1184 505 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X floatatom 764 567 5 0 0 0 - - -, f 5;
-#X floatatom 654 730 5 0 0 0 - - -, f 5;
-#X obj 564 459 metro 50;
-#X obj 654 706 +;
-#X obj 764 542 +;
-#X obj 1167 81 m_scale 0 1 0 50;
-#X text 1009 107 LOWPASS 127 -> 60;
-#X text 1186 108 LFO;
-#X obj 1175 156 s \$0-lfo;
-#X obj 782 401 r \$0-lfo;
-#X text 1239 107 0 -> 50;
-#X text 829 454 depth;
+#X floatatom 1377 608 5 0 0 0 - - -, f 5;
+#X floatatom 1164 723 5 0 0 0 - - -, f 5;
+#X obj 1184 482 metro 50;
+#X obj 1164 699 +;
+#X obj 1377 583 +;
+#X obj 1188 149 m_scale 0 1 0 50;
+#X text 1023 175 LOWPASS 127 -> 60;
+#X text 1200 176 LFO;
+#X obj 1189 224 s \$0-lfo;
+#X obj 1395 410 r \$0-lfo;
+#X text 1253 175 0 -> 50;
+#X text 1442 463 depth;
 #X obj 887 223 s \$0-bangMetro;
-#X text 758 353 LFO;
-#X text 685 377 speed;
-#X text 650 630 delay time (ms);
-#X obj 564 503 s \$0-bangLFO;
-#X obj 789 429 r \$0-bangLFO;
-#X obj 749 489 r \$0-bangLFO;
-#X obj 692 671 r \$0-bangLFO;
-#X text 1356 108 WHITE NOISE 0 -> 1;
-#X text 998 592 LOWPASS;
-#X text 585 632 DELAY;
-#X obj 590 316 r \$0-on;
-#X msg 590 339 bang;
-#X obj 520 316 r \$0-off;
-#X msg 520 339 stop;
+#X text 1391 362 LFO;
+#X text 1305 400 speed;
+#X text 1160 623 delay time (ms);
+#X obj 1184 526 s \$0-bangLFO;
+#X obj 1402 438 r \$0-bangLFO;
+#X obj 1362 498 r \$0-bangLFO;
+#X obj 1192 665 r \$0-bangLFO;
+#X text 1370 176 WHITE NOISE 0 -> 1;
+#X text 639 585 LOWPASS;
+#X text 1095 625 DELAY;
+#X obj 1210 409 r \$0-on;
+#X msg 1210 432 bang;
+#X obj 1140 409 r \$0-off;
+#X msg 1140 432 stop;
 #X obj 84 138 s \$0-off;
-#X obj 680 291 r \$0-lfo;
-#X obj 680 320 * 10;
+#X obj 1300 331 r \$0-lfo;
+#X obj 1300 360 * 16;
+#X obj 1012 77 spigot 0;
+#X obj 1081 77 r \$0-state;
+#X obj 1188 78 spigot 0;
+#X obj 1257 78 r \$0-state;
+#X obj 1358 77 spigot 0;
+#X obj 1427 77 r \$0-state;
 #X connect 2 0 23 0;
 #X connect 3 0 22 0;
 #X connect 4 0 5 0;
@@ -149,8 +155,8 @@
 #X connect 14 0 11 0;
 #X connect 15 0 12 0;
 #X connect 16 0 17 0;
-#X connect 18 0 84 0;
-#X connect 19 0 102 0;
+#X connect 18 0 127 0;
+#X connect 19 0 129 0;
 #X connect 20 0 21 0;
 #X connect 21 0 3 0;
 #X connect 21 1 2 0;
@@ -189,7 +195,7 @@
 #X connect 64 0 61 1;
 #X connect 66 0 75 0;
 #X connect 67 0 36 0;
-#X connect 68 0 31 0;
+#X connect 68 0 131 0;
 #X connect 69 0 77 0;
 #X connect 69 1 14 0;
 #X connect 69 2 15 0;
@@ -236,3 +242,9 @@
 #X connect 123 0 99 0;
 #X connect 125 0 126 0;
 #X connect 126 0 92 0;
+#X connect 127 0 84 0;
+#X connect 128 0 127 1;
+#X connect 129 0 102 0;
+#X connect 130 0 129 1;
+#X connect 131 0 31 0;
+#X connect 132 0 131 1;
