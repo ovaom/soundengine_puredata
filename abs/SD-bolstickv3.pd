@@ -1,4 +1,4 @@
-#N canvas 61 24 1564 960 10;
+#N canvas 61 24 1078 899 10;
 #X text 673 176 ON;
 #X text 608 176 OFF;
 #X obj 652 175 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -51,41 +51,41 @@
 #X obj 123 625 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 122 566 r \$0-preset0;
-#X obj 1005 597 r \$0-state;
-#X obj 871 570 r \$0-off;
-#X obj 952 624 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 915 600 r \$0-state;
+#X obj 781 573 r \$0-off;
+#X obj 862 627 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 939 570 r \$0-preset2;
-#X obj 939 597 spigot 1;
+#X obj 849 573 r \$0-preset2;
+#X obj 849 600 spigot 1;
 #X text 63 517 PRESET 0;
-#X text 459 522 PRESET 1;
-#X text 933 520 PRESET 2;
-#X msg 887 608 1;
+#X text 466 519 PRESET 1;
+#X text 843 520 PRESET 2;
+#X msg 797 611 1;
 #X msg 68 609 1;
 #X obj 52 732 SEQ-readWavSequence;
 #X obj 506 1238 FX-reverb;
 #X text 589 1240 reverb;
 #X text 200 648 sequencer;
-#X text 1053 644 sequencer;
+#X text 963 647 sequencer;
 #X text 249 625 tempo;
-#X text 1075 624 tempo;
+#X text 985 627 tempo;
 #X obj 536 1215 r \$0-param1OK;
-#X obj 604 594 r \$0-state;
-#X obj 537 594 spigot 1;
-#X obj 467 559 r \$0-off;
-#X obj 571 1084 *~;
-#X msg 486 603 1;
-#X msg 590 1051 0.1;
-#X obj 590 1028 loadbang;
-#X text 627 1053 set volume;
+#X obj 604 597 r \$0-state;
+#X obj 537 597 spigot 1;
+#X obj 467 562 r \$0-off;
+#X obj 466 1106 *~;
+#X msg 486 606 1;
+#X msg 485 1073 0.1;
+#X obj 485 1050 loadbang;
+#X text 522 1075 set volume;
 #X obj 78 652 loadbang;
-#X obj 896 648 loadbang;
-#X msg 982 696 symbol mouth0;
+#X obj 806 651 loadbang;
+#X msg 871 699 symbol mouth0;
 #X obj 147 652 t s s;
-#X obj 962 646 t s s;
-#X obj 875 723 SEQ-readWavSequence;
+#X obj 872 649 t s s;
+#X obj 785 726 SEQ-readWavSequence;
 #X text 204 733 wav sequencer;
-#X text 1019 724 wav sequencer;
+#X text 929 727 wav sequencer;
 #X obj 52 409 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 193 409 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -115,20 +115,20 @@
 #X msg 72 408 0;
 #X msg 131 683 symbol bolstick_sounds/percu/;
 #X msg 146 704 symbol percu0;
-#X msg 965 674 symbol grelot_sounds/mouth/;
-#X obj 537 559 r \$0-preset1;
-#X obj 873 1172 *~;
-#X obj 892 1116 loadbang;
-#X text 929 1141 set volume;
-#X msg 892 1139 0.5;
-#X obj 467 699 VI-beating;
-#X obj 513 664 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X msg 828 677 symbol grelot_sounds/mouth/;
+#X obj 537 562 r \$0-preset1;
+#X obj 785 972 *~;
+#X obj 804 916 loadbang;
+#X text 841 941 set volume;
+#X msg 804 939 0.5;
+#X obj 467 712 VI-beating;
+#X obj 513 684 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 534 663 r \$0-param0OK;
+#X obj 534 683 r \$0-param0OK;
 #X obj 412 152 s \$0-param2;
 #X obj 144 624 r \$0-param2OK;
-#X obj 500 640 r \$0-param2OK;
-#X obj 973 623 r \$0-param2OK;
+#X obj 500 660 r \$0-param2OK;
+#X obj 883 626 r \$0-param2OK;
 #X connect 2 0 14 0;
 #X connect 3 0 13 0;
 #X connect 5 0 37 0;
@@ -177,6 +177,7 @@
 #X connect 67 0 68 1;
 #X connect 68 0 71 0;
 #X connect 69 0 113 0;
+#X connect 70 0 43 0;
 #X connect 71 0 113 0;
 #X connect 72 0 70 1;
 #X connect 73 0 72 0;
@@ -216,7 +217,7 @@
 #X connect 109 0 60 0;
 #X connect 110 0 112 0;
 #X connect 112 0 109 1;
-#X connect 113 0 43 0;
+#X connect 113 0 70 0;
 #X connect 115 0 114 0;
 #X connect 115 0 113 2;
 #X connect 117 0 47 0;
