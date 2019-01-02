@@ -1,4 +1,4 @@
-#N canvas 455 71 1346 885 10;
+#N canvas 190 78 1346 885 10;
 #X obj 73 805 qlist;
 #X msg 120 548 bang;
 #X text 197 613 set relative tempo;
@@ -36,7 +36,7 @@
 #X obj 624 929 outlet;
 #X obj 408 98 print new state;
 #X obj 143 836 print qlistdone;
-#X obj 270 109 s \$0-innerState;
+#X obj 270 118 s \$0-innerState;
 #X obj 610 54 inlet;
 #X obj 815 54 inlet;
 #X text 809 23 prefix;
@@ -44,7 +44,7 @@
 #X text 608 26 repo url;
 #X obj 610 139 s \$0-inletUrl;
 #X obj 992 138 hsl 100 15 0.2 2 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 1510 1;
+-1 -1 0 1;
 #X floatatom 1120 139 5 0 0 0 - - -, f 5;
 #X obj 989 163 s \$0-tempo;
 #X obj 989 81 m_scale 0 1 0.2 2;
@@ -124,6 +124,7 @@
 #X connect 68 0 64 0;
 #X connect 68 0 66 0;
 #X connect 70 0 26 0;
+#X connect 70 0 34 0;
 #X connect 71 0 72 0;
 #X connect 71 0 40 0;
 #X connect 73 0 38 0;
