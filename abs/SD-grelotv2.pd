@@ -1,4 +1,4 @@
-#N canvas 148 23 1532 921 10;
+#N canvas 123 23 1532 921 10;
 #X text 556 155 ON;
 #X text 491 155 OFF;
 #X obj 535 154 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -15,7 +15,7 @@
 #X text 333 157 y position;
 #X obj 470 43 r \$0-state;
 #X obj 470 128 route 0 1;
-#X obj 516 1249 outlet~;
+#X obj 516 1299 outlet~;
 #X obj 470 70 valueChanged;
 #X obj 470 181 s \$0-off;
 #X obj 535 182 s \$0-on;
@@ -85,8 +85,8 @@
 #X obj 579 594 r \$0-param0OK;
 #X text 677 596 tempo;
 #X obj 526 756 r \$0-param1OK;
-#X text 544 789 pitch;
-#X obj 473 788 FX-pitch;
+#X text 544 959 pitch;
+#X obj 473 958 FX-pitch;
 #X obj 89 628 loadbang;
 #X msg 107 659 symbol grelot_sounds/tabla/;
 #X msg 149 680 symbol tabla0;
@@ -104,13 +104,21 @@
 #X msg 595 408 4;
 #X obj 595 431 s \$0-preset4;
 #X msg 72 408 0;
-#X obj 474 866 u_makepoly 8 1 s_rhodey \$0-piano;
+#X obj 474 1026 u_makepoly 8 1 s_rhodey \$0-piano;
 #X text 882 496 PRESET 2;
 #X text 1508 497 PRESET 3;
 #X obj 546 547 r \$0-preset1;
-#X obj 510 1051 loadbang;
-#X msg 510 1073 0.3;
-#X obj 481 1095 *~;
+#X obj 510 1101 loadbang;
+#X msg 510 1123 0.3;
+#X obj 481 1145 *~;
+#X obj 526 807 * 100;
+#X obj 526 829 i;
+#X obj 526 875 / 100;
+#X floatatom 544 901 5 0 0 0 - - -, f 5;
+#X floatatom 576 779 5 0 0 0 - - -, f 5;
+#X obj 58 50 inlet;
+#X text 103 49 number;
+#X obj 526 851 M-pair;
 #X connect 2 0 17 0;
 #X connect 3 0 16 0;
 #X connect 5 0 18 0;
@@ -165,7 +173,8 @@
 #X connect 73 0 84 0;
 #X connect 75 0 74 0;
 #X connect 75 0 84 3;
-#X connect 77 0 79 1;
+#X connect 77 0 103 0;
+#X connect 77 0 107 0;
 #X connect 79 0 96 0;
 #X connect 80 0 83 0;
 #X connect 81 0 56 1;
@@ -192,3 +201,8 @@
 #X connect 100 0 101 0;
 #X connect 101 0 102 1;
 #X connect 102 0 14 0;
+#X connect 103 0 104 0;
+#X connect 104 0 110 0;
+#X connect 105 0 106 0;
+#X connect 105 0 79 1;
+#X connect 110 0 105 0;
