@@ -1,4 +1,4 @@
-#N canvas 648 23 1078 874 10;
+#N canvas 602 23 1078 874 10;
 #X text 673 176 ON;
 #X text 608 176 OFF;
 #X obj 652 175 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -63,7 +63,7 @@
 #X msg 797 611 1;
 #X msg 68 609 1;
 #X obj 52 782 SEQ-readWavSequence;
-#X obj 415 1214 FX-reverb;
+#X obj 532 1255 FX-reverb;
 #X text 498 1216 reverb;
 #X text 200 648 sequencer;
 #X text 963 647 sequencer;
@@ -84,7 +84,7 @@
 #X obj 147 652 t s s;
 #X obj 872 649 t s s;
 #X obj 785 726 SEQ-readWavSequence;
-#X text 204 783 wav sequencer;
+#X text 196 784 wav sequencer;
 #X text 929 727 wav sequencer;
 #X obj 52 409 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -130,19 +130,20 @@
 #X msg 828 677 symbol bolstick_sounds/mouth/;
 #X msg 209 934 dry \$1;
 #X msg 195 851 depth \$1;
-#X floatatom 195 829 5 0 0 1 depth_(min=1) - -, f 5;
 #X obj 51 980 e_bitcrusher bc1000 4;
 #X obj 51 934 *~ 0.5;
 #X obj 107 933 / 100;
 #X floatatom 107 912 5 0 0 0 - - -, f 5;
-#X text 312 889 dry_wet;
-#X obj 209 910 m_scale 0 1 0.7 1;
+#X text 272 935 dry_wet;
 #X obj 418 1182 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 501 654 r \$0-param2OK;
 #X obj 40 40 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 209 884 r \$0-param1OK;
+#X obj 195 808 loadbang;
+#X msg 195 830 5;
+#X obj 209 888 r \$0-param0OK;
+#X obj 209 911 m_scale 0 1 0.8 1;
 #X connect 2 0 14 0;
 #X connect 3 0 13 0;
 #X connect 5 0 37 0;
@@ -185,15 +186,15 @@
 #X connect 53 0 57 0;
 #X connect 57 0 80 0;
 #X connect 58 0 59 0;
-#X connect 59 0 123 0;
+#X connect 59 0 122 0;
+#X connect 59 0 43 0;
 #X connect 60 0 43 0;
 #X connect 66 0 60 1;
-#X connect 66 0 128 0;
+#X connect 66 0 126 0;
 #X connect 67 0 68 1;
 #X connect 68 0 71 0;
 #X connect 69 0 112 0;
 #X connect 70 0 43 0;
-#X connect 70 0 123 0;
 #X connect 71 0 112 0;
 #X connect 72 0 70 1;
 #X connect 73 0 72 0;
@@ -240,13 +241,14 @@
 #X connect 117 0 51 0;
 #X connect 117 0 80 3;
 #X connect 118 0 80 1;
-#X connect 119 0 122 1;
-#X connect 120 0 122 1;
-#X connect 121 0 120 0;
-#X connect 122 0 60 0;
-#X connect 123 0 122 0;
-#X connect 124 0 123 1;
-#X connect 125 0 124 0;
-#X connect 127 0 119 0;
-#X connect 129 0 112 1;
-#X connect 131 0 127 0;
+#X connect 119 0 121 1;
+#X connect 120 0 121 1;
+#X connect 121 0 43 0;
+#X connect 122 0 121 0;
+#X connect 123 0 122 1;
+#X connect 124 0 123 0;
+#X connect 127 0 112 1;
+#X connect 129 0 130 0;
+#X connect 130 0 120 0;
+#X connect 131 0 132 0;
+#X connect 132 0 119 0;

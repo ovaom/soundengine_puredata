@@ -1,4 +1,4 @@
-#N canvas 123 23 1532 921 10;
+#N canvas 102 23 1532 921 10;
 #X text 556 155 ON;
 #X text 491 155 OFF;
 #X obj 535 154 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -6,7 +6,7 @@
 #X obj 470 155 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 468 11 HARDWARE CONTROLS;
-#X obj 53 36 inlet datas;
+#X obj 53 25 inlet datas;
 #X obj 136 131 s \$0-preset;
 #X obj 225 131 s \$0-param0;
 #X obj 53 131 s \$0-state;
@@ -15,7 +15,7 @@
 #X text 333 157 y position;
 #X obj 470 43 r \$0-state;
 #X obj 470 128 route 0 1;
-#X obj 516 1299 outlet~;
+#X obj 507 1285 outlet~;
 #X obj 470 70 valueChanged;
 #X obj 470 181 s \$0-off;
 #X obj 535 182 s \$0-on;
@@ -84,9 +84,9 @@
 -1 -1;
 #X obj 579 594 r \$0-param0OK;
 #X text 677 596 tempo;
-#X obj 526 756 r \$0-param1OK;
-#X text 544 959 pitch;
-#X obj 473 958 FX-pitch;
+#X obj 525 756 r \$0-param1OK;
+#X text 543 959 pitch;
+#X obj 472 958 FX-pitch;
 #X obj 89 628 loadbang;
 #X msg 107 659 symbol grelot_sounds/tabla/;
 #X msg 149 680 symbol tabla0;
@@ -104,21 +104,20 @@
 #X msg 595 408 4;
 #X obj 595 431 s \$0-preset4;
 #X msg 72 408 0;
-#X obj 474 1026 u_makepoly 8 1 s_rhodey \$0-piano;
+#X obj 472 1026 u_makepoly 8 1 s_rhodey \$0-piano;
 #X text 882 496 PRESET 2;
 #X text 1508 497 PRESET 3;
 #X obj 546 547 r \$0-preset1;
-#X obj 510 1101 loadbang;
-#X msg 510 1123 0.3;
-#X obj 481 1145 *~;
-#X obj 526 807 * 100;
-#X obj 526 829 i;
-#X obj 526 875 / 100;
-#X floatatom 544 901 5 0 0 0 - - -, f 5;
-#X floatatom 576 779 5 0 0 0 - - -, f 5;
-#X obj 58 50 inlet;
+#X obj 501 1087 loadbang;
+#X msg 501 1109 0.3;
+#X obj 472 1131 *~;
+#X obj 525 807 * 100;
+#X obj 525 829 i;
+#X obj 525 875 / 100;
+#X floatatom 543 901 5 0 0 0 - - -, f 5;
+#X floatatom 575 779 5 0 0 0 - - -, f 5;
 #X text 103 49 number;
-#X obj 526 851 M-pair;
+#X obj 525 851 M-pair;
 #X connect 2 0 17 0;
 #X connect 3 0 16 0;
 #X connect 5 0 18 0;
@@ -202,7 +201,7 @@
 #X connect 101 0 102 1;
 #X connect 102 0 14 0;
 #X connect 103 0 104 0;
-#X connect 104 0 110 0;
+#X connect 104 0 109 0;
 #X connect 105 0 106 0;
 #X connect 105 0 79 1;
-#X connect 110 0 105 0;
+#X connect 109 0 105 0;
