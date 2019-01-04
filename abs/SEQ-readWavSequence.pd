@@ -1,4 +1,4 @@
-#N canvas 148 79 1568 890 10;
+#N canvas 112 79 1568 890 10;
 #X obj 566 1008 readsf~;
 #X msg 533 980 1;
 #X obj 532 828 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -109,6 +109,7 @@
 #X obj 1208 633 t i i;
 #X obj 1208 727 + 1;
 #X text 1017 23 tempo;
+#X obj 1019 122 m_scale 0 1 0.4 1.5;
 #X connect 0 0 46 0;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
@@ -151,7 +152,7 @@
 #X connect 59 0 62 0;
 #X connect 62 0 30 0;
 #X connect 63 0 62 1;
-#X connect 65 0 64 0;
+#X connect 65 0 105 0;
 #X connect 66 0 65 0;
 #X connect 67 0 65 1;
 #X connect 68 0 53 0;
@@ -185,3 +186,4 @@
 #X connect 102 0 100 0;
 #X connect 102 1 98 0;
 #X connect 103 0 101 0;
+#X connect 105 0 64 0;
