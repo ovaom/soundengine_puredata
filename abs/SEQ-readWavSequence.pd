@@ -1,4 +1,4 @@
-#N canvas 112 27 1568 890 10;
+#N canvas 148 79 1568 890 10;
 #X obj 566 1008 readsf~;
 #X msg 533 980 1;
 #X obj 532 828 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -67,7 +67,7 @@
 #X text 699 610 global var : route if good prefix;
 #X obj 528 631 route symbol;
 #X obj 609 609 r \$0-prefix;
-#X obj 1019 318 s \$0-tempo;
+#X obj 1019 176 s \$0-tempo;
 #X obj 1019 72 spigot 0;
 #X obj 1019 46 inlet;
 #X obj 1088 72 r \$0-innerState;
@@ -108,16 +108,7 @@
 #X floatatom 1208 748 5 0 0 0 - - -, f 5;
 #X obj 1208 633 t i i;
 #X obj 1208 727 + 1;
-#X obj 1019 159 M-pair;
-#X obj 1019 115 * 100;
-#X obj 1019 137 i;
 #X text 1017 23 tempo;
-#X obj 1019 198 / 100;
-#X floatatom 1034 246 5 0 0 0 - - -, f 5;
-#X text 1064 136 scale on multiples of 2;
-#X obj 1019 286 max 0.2;
-#X obj 1019 220 * 1.5;
-#X text 1066 221 mapping 0.3->1.5;
 #X connect 0 0 46 0;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
@@ -160,7 +151,7 @@
 #X connect 59 0 62 0;
 #X connect 62 0 30 0;
 #X connect 63 0 62 1;
-#X connect 65 0 105 0;
+#X connect 65 0 64 0;
 #X connect 66 0 65 0;
 #X connect 67 0 65 1;
 #X connect 68 0 53 0;
@@ -194,10 +185,3 @@
 #X connect 102 0 100 0;
 #X connect 102 1 98 0;
 #X connect 103 0 101 0;
-#X connect 104 0 108 0;
-#X connect 105 0 106 0;
-#X connect 106 0 104 0;
-#X connect 108 0 112 0;
-#X connect 111 0 64 0;
-#X connect 112 0 109 0;
-#X connect 112 0 111 0;
