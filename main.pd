@@ -1,4 +1,4 @@
-#N canvas 151 23 1514 889 10;
+#N canvas 275 23 1514 889 10;
 #X declare -path abs/grelot_sounds;
 #X declare -path abs/ocarina_sounds;
 #X declare -path abs/corail_sounds;
@@ -29,7 +29,7 @@
 #X obj 619 843 *~ 0.9;
 #X obj 40 218 r objectId;
 #X obj 40 276 route 0 1 2 3;
-#N canvas 742 176 744 725 receiveGameEngine2 0;
+#N canvas 599 112 744 725 receiveGameEngine2 1;
 #X obj 29 69 oscparse;
 #X obj 29 44 netreceive -u -b 9002;
 #X obj 403 364 f;
@@ -313,9 +313,7 @@
 #X connect 7 2 75 0;
 #X connect 7 3 25 0;
 #X connect 7 3 24 0;
-#X connect 8 0 9 0;
 #X connect 8 0 12 0;
-#X connect 8 1 16 0;
 #X connect 8 1 10 0;
 #X connect 11 0 13 1;
 #X connect 13 0 7 0;
