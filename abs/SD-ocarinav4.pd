@@ -128,9 +128,9 @@ ocarina_sounds/swedish/voxpitchPlus7.wav;
 #X msg 771 647 ocarina_sounds/doubidoo/doubidou35-Vibes1Soft.wav ocarina_sounds/doubidoo/doubidou36-KontaktPortablex64.wav
 ocarina_sounds/doubidoo/doubidou38-KontaktPortablex64.wav ocarina_sounds/doubidoo/doubidou39-KontaktPortablex64.wav
 ocarina_sounds/doubidoo/doubidou40-KontaktPortablex64.wav;
-#X msg 372 647 ocarina_sounds/marimbarp/64-ElectricPiano1Soft.wav ocarina_sounds/marimbarp/63-ElectricPiano4Pad.wav
-ocarina_sounds/marimbarp/62-Glockenspiel3Detuned.wav ocarina_sounds/marimbarp/64-ElectricPiano4Pad.wav
-ocarina_sounds/marimbarp/66-ElectricPiano1Soft.wav;
+#X msg 372 647 ocarina_sounds/marimbarp/marimbarp2.wav ocarina_sounds/marimbarp/marimbarp1.wav
+ocarina_sounds/marimbarp/marimbarp3.wav ocarina_sounds/marimbarp/marimbarp4.wav
+ocarina_sounds/marimbarp/marimbarp5.wav;
 #X connect 3 0 21 0;
 #X connect 4 0 3 0;
 #X connect 6 0 21 0;
