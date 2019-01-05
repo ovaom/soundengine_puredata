@@ -101,10 +101,10 @@
 #X msg 1371 190 \$1 150;
 #X msg 1522 190 \$1 150;
 #X obj 584 219 s \$0-innerState;
-#X obj 223 941 r \$0-press0;
-#X obj 252 964 r \$0-press1;
-#X obj 282 988 r \$0-press2;
-#X obj 312 1013 r \$0-press3;
+#X obj 310 889 r \$0-press0;
+#X obj 339 912 r \$0-press1;
+#X obj 369 936 r \$0-press2;
+#X obj 399 961 r \$0-press3;
 #X obj 47 629 r \$0-preset0;
 #X obj 857 91 valueChanged;
 #X obj 857 64 r \$0-preset;
@@ -119,19 +119,18 @@
 #X msg 47 652 ocarina_sounds/swedish/voxpitch0.wav ocarina_sounds/swedish/voxpitchMinus12.wav
 ocarina_sounds/swedish/voxpitchMinus7.wav ocarina_sounds/swedish/voxpitchPlus5.wav
 ocarina_sounds/swedish/voxpitchPlus7.wav;
-#X obj 193 867 r \$0-innerState;
+#X obj 280 815 r \$0-innerState;
 #X obj 372 723 pack s s s s s;
 #X obj 372 624 r \$0-preset1;
-#X msg 372 647 ocarina_sounds/marimbarp/62-Glockenspiel3Detuned.wav
-ocarina_sounds/marimbarp/63-ElectricPiano4Pad.wav ocarina_sounds/marimbarp/64-ElectricPIano1Soft.wav
-ocarina_sounds/marimbarp/64-ElectricPiano4Pad.wav ocarina_sounds/marimbarp/66-ElectricPIano1Soft.wav
-;
-#X obj 771 757 pack s s s s s;
+#X obj 771 723 pack s s s s s;
 #X obj 771 624 r \$0-preset2;
+#X obj 279 1020 VI-wavePlayer-poly;
 #X msg 771 647 ocarina_sounds/doubidoo/doubidou35-Vibes1Soft.wav ocarina_sounds/doubidoo/doubidou36-KontaktPortablex64.wav
-ocarina_sounds/doubidoo/doubidou38-Kontakt Portablex64.wav ocarina_sounds/doubidoo/doubidou39-KontaktPortablex64.wav
+ocarina_sounds/doubidoo/doubidou38-KontaktPortablex64.wav ocarina_sounds/doubidoo/doubidou39-KontaktPortablex64.wav
 ocarina_sounds/doubidoo/doubidou40-KontaktPortablex64.wav;
-#X obj 192 1072 VI-wavePlayer-poly;
+#X msg 372 647 ocarina_sounds/marimbarp/64-ElectricPiano1Soft.wav ocarina_sounds/marimbarp/63-ElectricPiano4Pad.wav
+ocarina_sounds/marimbarp/62-Glockenspiel3Detuned.wav ocarina_sounds/marimbarp/64-ElectricPiano4Pad.wav
+ocarina_sounds/marimbarp/66-ElectricPIano1Soft.wav;
 #X connect 3 0 21 0;
 #X connect 4 0 3 0;
 #X connect 6 0 21 0;
@@ -194,10 +193,10 @@ ocarina_sounds/doubidoo/doubidou40-KontaktPortablex64.wav;
 #X connect 87 0 80 0;
 #X connect 88 0 81 0;
 #X connect 89 0 82 0;
-#X connect 91 0 114 1;
-#X connect 92 0 114 2;
-#X connect 93 0 114 3;
-#X connect 94 0 114 4;
+#X connect 91 0 112 1;
+#X connect 92 0 112 2;
+#X connect 93 0 112 3;
+#X connect 94 0 112 4;
 #X connect 95 0 106 0;
 #X connect 96 0 98 0;
 #X connect 96 0 99 0;
@@ -213,14 +212,14 @@ ocarina_sounds/doubidoo/doubidou40-KontaktPortablex64.wav;
 #X connect 104 0 61 0;
 #X connect 104 0 78 0;
 #X connect 104 0 90 0;
-#X connect 105 0 114 5;
+#X connect 105 0 112 5;
 #X connect 106 0 105 0;
-#X connect 107 0 114 0;
-#X connect 108 0 114 5;
-#X connect 109 0 110 0;
-#X connect 110 0 108 0;
-#X connect 111 0 114 5;
-#X connect 112 0 113 0;
-#X connect 113 0 111 0;
-#X connect 114 0 0 0;
+#X connect 107 0 112 0;
+#X connect 108 0 112 5;
+#X connect 109 0 114 0;
+#X connect 110 0 112 5;
+#X connect 111 0 113 0;
+#X connect 112 0 0 0;
+#X connect 113 0 110 0;
+#X connect 114 0 108 0;
 #X coords 0 961 1 960 85 60 0;
