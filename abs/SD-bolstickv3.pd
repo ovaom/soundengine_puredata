@@ -1,4 +1,4 @@
-#N canvas 385 23 1078 874 10;
+#N canvas 254 23 1280 922 10;
 #X text 673 176 ON;
 #X text 608 176 OFF;
 #X obj 652 175 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -51,7 +51,7 @@
 #X obj 944 741 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 189 594 r \$0-state;
-#X obj 55 567 r \$0-off;
+#X obj 56 567 r \$0-off;
 #X obj 136 621 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 123 594 spigot 1;
@@ -70,11 +70,11 @@
 #X obj 604 597 r \$0-state;
 #X obj 537 597 spigot 1;
 #X obj 467 562 r \$0-off;
-#X obj 472 1106 *~;
+#X obj 471 1106 *~;
 #X msg 486 606 1;
-#X msg 491 1073 0.1;
-#X obj 491 1050 loadbang;
-#X text 528 1075 set volume;
+#X msg 490 1073 0.1;
+#X obj 490 1050 loadbang;
+#X text 527 1075 set volume;
 #X obj 861 653 loadbang;
 #X obj 80 645 loadbang;
 #X msg 145 693 symbol mouth0;
@@ -125,25 +125,42 @@
 #X obj 157 620 r \$0-param2OK;
 #X msg 102 671 symbol bolstick_sounds/mouth/;
 #X msg 992 935 dry \$1;
-#X msg 978 852 depth \$1;
-#X obj 834 981 e_bitcrusher bc1000 4;
-#X obj 834 935 *~ 0.5;
-#X obj 890 934 / 100;
-#X floatatom 890 913 5 0 0 0 - - -, f 5;
+#X msg 979 852 depth \$1;
+#X obj 835 981 e_bitcrusher bc1000 4;
+#X obj 835 935 *~ 0.5;
+#X obj 891 934 / 100;
+#X floatatom 891 913 5 0 0 0 - - -, f 5;
 #X text 1055 936 dry_wet;
 #X obj 139 1092 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 501 654 r \$0-param2OK;
-#X obj 40 40 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 978 809 loadbang;
-#X msg 978 831 5;
+#X obj 500 654 r \$0-param2OK;
+#X obj 979 809 loadbang;
+#X msg 979 831 5;
 #X obj 992 889 r \$0-param0OK;
 #X obj 992 912 m_scale 0 1 0.8 1;
 #X obj 835 783 SEQ-wavSequence;
 #X obj 59 720 SEQ-wavSequence;
 #X obj 905 567 r \$0-preset2;
 #X obj 123 567 r \$0-preset0;
+#X obj 1292 775 r \$0-innerState;
+#X text 1300 517 PRESET 3;
+#X obj 1414 584 r \$0-preset3;
+#X obj 1249 1109 threshold~;
+#X obj 1269 1169 moses;
+#X obj 1292 980 VI-bolstick_wavePlayer-crossFade;
+#X obj 1315 839 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1336 838 r \$0-param0OK;
+#X obj 1360 889 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1381 888 r \$0-param1OK;
+#X obj 1403 919 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1424 918 r \$0-param1OK;
+#X msg 1414 607 ⁨bolstick_sounds/⁨zulu/drum.wav bolstick_sounds/⁨zulu⁩/groove.wav
+⁨bolstick_sounds/⁨zulu⁩/hiperc.wav ⁨bolstick_sounds/⁨zulu⁩/melodic.wav
+;
+#X obj 1414 683 pack s s s s;
 #X connect 2 0 14 0;
 #X connect 3 0 13 0;
 #X connect 5 0 37 0;
@@ -178,12 +195,12 @@
 #X connect 41 0 39 0;
 #X connect 44 0 45 1;
 #X connect 45 0 56 0;
-#X connect 46 0 129 0;
+#X connect 46 0 128 0;
 #X connect 48 0 51 1;
-#X connect 49 0 130 0;
+#X connect 49 0 129 0;
 #X connect 51 0 55 0;
-#X connect 55 0 130 0;
-#X connect 56 0 129 0;
+#X connect 55 0 129 0;
+#X connect 56 0 128 0;
 #X connect 57 0 43 0;
 #X connect 63 0 57 1;
 #X connect 63 0 122 0;
@@ -196,7 +213,7 @@
 #X connect 70 0 69 0;
 #X connect 72 0 75 0;
 #X connect 73 0 76 0;
-#X connect 74 0 130 2;
+#X connect 74 0 129 2;
 #X connect 75 0 102 0;
 #X connect 75 1 101 0;
 #X connect 76 0 74 0;
@@ -222,8 +239,8 @@
 #X connect 98 0 99 0;
 #X connect 100 0 86 0;
 #X connect 100 0 79 0;
-#X connect 101 0 129 1;
-#X connect 102 0 129 2;
+#X connect 101 0 128 1;
+#X connect 102 0 128 2;
 #X connect 103 0 65 0;
 #X connect 104 0 57 0;
 #X connect 105 0 107 0;
@@ -232,10 +249,10 @@
 #X connect 110 0 109 0;
 #X connect 110 0 108 2;
 #X connect 112 0 47 0;
-#X connect 112 0 129 3;
+#X connect 112 0 128 3;
 #X connect 113 0 50 0;
-#X connect 113 0 130 3;
-#X connect 114 0 130 1;
+#X connect 113 0 129 3;
+#X connect 114 0 129 1;
 #X connect 115 0 117 1;
 #X connect 116 0 117 1;
 #X connect 117 0 43 0;
@@ -243,12 +260,23 @@
 #X connect 119 0 118 1;
 #X connect 120 0 119 0;
 #X connect 123 0 108 1;
-#X connect 125 0 126 0;
-#X connect 126 0 116 0;
-#X connect 127 0 128 0;
-#X connect 128 0 115 0;
-#X connect 129 0 118 0;
-#X connect 129 0 43 0;
-#X connect 130 0 104 0;
-#X connect 131 0 45 0;
-#X connect 132 0 51 0;
+#X connect 124 0 125 0;
+#X connect 125 0 116 0;
+#X connect 126 0 127 0;
+#X connect 127 0 115 0;
+#X connect 128 0 118 0;
+#X connect 128 0 43 0;
+#X connect 129 0 104 0;
+#X connect 130 0 45 0;
+#X connect 131 0 51 0;
+#X connect 132 0 137 0;
+#X connect 134 0 144 0;
+#X connect 137 0 43 0;
+#X connect 139 0 138 0;
+#X connect 139 0 137 1;
+#X connect 141 0 140 0;
+#X connect 141 0 137 2;
+#X connect 143 0 142 0;
+#X connect 143 0 137 3;
+#X connect 144 0 145 0;
+#X connect 145 0 137 4;

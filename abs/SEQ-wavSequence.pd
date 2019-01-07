@@ -1,4 +1,4 @@
-#N canvas 112 79 1568 890 10;
+#N canvas 170 138 1568 890 10;
 #X obj 566 1008 readsf~;
 #X msg 533 980 1;
 #X obj 532 828 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -162,14 +162,11 @@
 #X connect 71 0 74 0;
 #X connect 72 0 75 0;
 #X connect 75 0 48 1;
-#X connect 75 0 73 0;
 #X connect 77 0 68 0;
 #X connect 79 0 85 0;
 #X connect 80 0 88 0;
-#X connect 85 0 86 0;
 #X connect 85 0 84 0;
 #X connect 88 0 82 0;
-#X connect 88 0 87 0;
 #X connect 91 0 94 0;
 #X connect 92 0 93 0;
 #X connect 93 0 94 0;
