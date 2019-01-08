@@ -1,4 +1,4 @@
-#N canvas 223 23 1457 866 10;
+#N canvas 127 23 1457 866 10;
 #X obj 813 1638 outlet~;
 #X obj 356 1024 /;
 #X obj 356 1126 *~ 0;
@@ -143,7 +143,7 @@
 #X obj 1090 1343 loadbang;
 #X text 1068 1219 play wav start;
 #X obj 1257 1018 sig~;
-#X floatatom 1130 1018 5 0 0 0 - - -, f 5;
+#X floatatom 1136 999 5 0 0 0 - - -, f 5;
 #X obj 1257 936 r \$0-param2;
 #X msg 1382 1251 bang;
 #X text 1424 1251 repeat last instruction;
@@ -169,12 +169,12 @@
 #X obj 1799 1336 loadbang;
 #X text 1777 1212 play wav end;
 #X msg 1780 1235 whistle-array3 1 1 0 4000;
-#X obj 1130 1037 / 100;
+#X obj 1136 1018 / 100;
 #X obj 1250 1081 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 1431 1079 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X text 1089 1027 test;
+#X text 1095 1008 test;
 #X text 1511 1420 loop;
 #X msg 1488 1389 1;
 #X obj 1257 960 spigot 1;
@@ -185,6 +185,9 @@
 #X obj 1257 1056 threshold~ 0.2 100 0.6 100;
 #X obj 130 1427 c_cpfade;
 #X obj 510 1427 c_cpfade;
+#X obj 1144 1472 r \$0-param2;
+#X obj 1126 1527 *~;
+#X obj 1144 1495 m_scale 0 1 0.3 1;
 #X connect 1 0 7 0;
 #X connect 1 0 7 1;
 #X connect 2 0 3 0;
@@ -264,7 +267,7 @@
 #X connect 105 3 66 0;
 #X connect 111 0 114 0;
 #X connect 113 0 114 1;
-#X connect 114 0 0 0;
+#X connect 114 0 159 0;
 #X connect 114 1 133 0;
 #X connect 115 0 114 1;
 #X connect 117 0 113 0;
@@ -276,7 +279,7 @@
 #X connect 124 0 129 0;
 #X connect 125 0 124 1;
 #X connect 128 0 129 1;
-#X connect 129 0 0 0;
+#X connect 129 0 159 0;
 #X connect 129 1 124 0;
 #X connect 130 0 129 1;
 #X connect 132 0 128 0;
@@ -285,7 +288,7 @@
 #X connect 134 0 114 0;
 #X connect 135 0 138 0;
 #X connect 137 0 138 1;
-#X connect 138 0 0 0;
+#X connect 138 0 159 0;
 #X connect 139 0 138 1;
 #X connect 141 0 137 0;
 #X connect 143 0 138 0;
@@ -303,4 +306,7 @@
 #X connect 155 1 146 0;
 #X connect 156 0 0 0;
 #X connect 157 0 0 0;
+#X connect 158 0 160 0;
+#X connect 159 0 0 0;
+#X connect 160 0 159 1;
 #X coords 0 866 1 865 85 60 0;
