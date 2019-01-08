@@ -1,4 +1,4 @@
-#N canvas 15 23 1653 961 10;
+#N canvas 87 136 1653 961 10;
 #X obj 897 1164 outlet~;
 #X obj 35 446 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -140,6 +140,28 @@ ocarina_sounds/marimbarp/marimbarp5.wav;
 #X obj 833 616 spigot 1;
 #X msg 771 619 1;
 #X obj 900 616 r \$0-state;
+#X obj 597 1134 *~;
+#X obj 628 1046 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 1200 1;
+#X floatatom 623 1067 5 0 0 0 - - -, f 5;
+#X obj 596 990 r \$0-preset0;
+#X obj 692 990 r \$0-preset1;
+#X obj 722 1041 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 900 1;
+#X floatatom 719 1062 5 0 0 0 - - -, f 5;
+#X obj 819 1041 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 1300 1;
+#X floatatom 816 1062 5 0 0 0 - - -, f 5;
+#X obj 789 990 r \$0-preset2;
+#X obj 659 1016 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 754 1016 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 854 1019 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 596 1017 0.244;
+#X msg 692 1017 0.183;
+#X msg 789 1017 0.265;
 #X connect 3 0 21 0;
 #X connect 4 0 3 0;
 #X connect 6 0 21 0;
@@ -227,7 +249,7 @@ ocarina_sounds/marimbarp/marimbarp5.wav;
 #X connect 110 0 121 0;
 #X connect 111 0 109 0;
 #X connect 112 0 107 0;
-#X connect 113 0 0 0;
+#X connect 113 0 124 0;
 #X connect 114 0 113 0;
 #X connect 115 0 116 0;
 #X connect 115 0 106 0;
@@ -241,4 +263,20 @@ ocarina_sounds/marimbarp/marimbarp5.wav;
 #X connect 121 0 111 0;
 #X connect 122 0 113 0;
 #X connect 123 0 121 1;
+#X connect 124 0 0 0;
+#X connect 125 0 126 0;
+#X connect 126 0 124 1;
+#X connect 127 0 137 0;
+#X connect 127 0 134 0;
+#X connect 128 0 138 0;
+#X connect 128 0 135 0;
+#X connect 129 0 130 0;
+#X connect 130 0 124 1;
+#X connect 131 0 132 0;
+#X connect 132 0 124 1;
+#X connect 133 0 139 0;
+#X connect 133 0 136 0;
+#X connect 134 0 125 0;
+#X connect 135 0 129 0;
+#X connect 136 0 131 0;
 #X coords 0 961 1 960 85 60 0;
