@@ -17,7 +17,7 @@
 #X floatatom 610 190 5 0 0 0 - - -, f 5;
 #X obj 267 284 +;
 #X obj 285 72 r \$0-notes;
-#X obj 562 107 m_scale 0 1 -16 16;
+#X obj 562 107 m_scale 0 1 0 10;
 #X connect 0 0 12 0;
 #X connect 0 0 18 0;
 #X connect 2 0 6 0;
