@@ -1,4 +1,4 @@
-#N canvas 208 103 1532 921 10;
+#N canvas 148 23 1532 921 10;
 #X text 706 155 ON;
 #X text 641 155 OFF;
 #X obj 685 154 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -8,11 +8,11 @@
 #X text 618 11 HARDWARE CONTROLS;
 #X obj 53 25 inlet datas;
 #X obj 136 131 s \$0-preset;
-#X obj 225 131 s \$0-param0;
+#X obj 225 136 s \$0-param0;
 #X obj 53 131 s \$0-state;
-#X obj 325 131 s \$0-param1;
-#X text 233 157 x position;
-#X text 333 157 y position;
+#X obj 325 136 s \$0-param1;
+#X text 233 162 x position;
+#X text 333 162 y position;
 #X obj 620 43 r \$0-state;
 #X obj 620 128 route 0 1;
 #X obj 507 1285 outlet~;
@@ -107,8 +107,8 @@
 #X floatatom 197 782 5 0 0 0 - - -, f 5;
 #X msg 165 759 1;
 #X obj 135 99 pipe 5;
-#X obj 225 99 pipe 10;
-#X obj 325 99 pipe 10;
+#X obj 225 104 pipe 10;
+#X obj 325 104 pipe 10;
 #X obj 616 745 * 2;
 #X msg 501 1159 0.05;
 #X obj 165 730 r \$0-param1OK;
