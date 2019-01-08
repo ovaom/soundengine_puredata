@@ -48,14 +48,14 @@
 #X obj 1121 601 r \$0-state;
 #X obj 1055 601 spigot 1;
 #X obj 986 568 r \$0-off;
-#X obj 1094 741 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 1094 731 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 63 517 PRESET 0;
 #X text 586 519 PRESET 1;
 #X text 993 520 PRESET 2;
 #X msg 1001 610 1;
 #X text 1133 649 sequencer;
-#X text 1220 741 tempo;
+#X text 1220 731 tempo;
 #X obj 724 597 r \$0-state;
 #X obj 657 597 spigot 1;
 #X obj 587 562 r \$0-off;
@@ -102,7 +102,7 @@
 -1 -1;
 #X obj 654 681 r \$0-param0OK;
 #X obj 412 152 s \$0-param2;
-#X obj 1115 740 r \$0-param2OK;
+#X obj 1115 730 r \$0-param2OK;
 #X msg 1142 935 dry \$1;
 #X msg 1129 852 depth \$1;
 #X obj 985 981 e_bitcrusher bc1000 4;
@@ -143,6 +143,7 @@ bolstick_sounds/zulu/hululement/hulul_end.wav;
 #X msg 214 692 bolstick_sounds/zulu/drum.wav bolstick_sounds/zulu/hiperc.wav
 bolstick_sounds/zulu/groove.wav bolstick_sounds/zulu/melodic.wav;
 #X obj 175 635 r \$0-state;
+#X obj 1186 757 m_scale 0 1 0.3 0.8;
 #X connect 2 0 14 0;
 #X connect 3 0 13 0;
 #X connect 5 0 37 0;
@@ -216,7 +217,7 @@ bolstick_sounds/zulu/groove.wav bolstick_sounds/zulu/melodic.wav;
 #X connect 92 0 91 0;
 #X connect 92 0 90 2;
 #X connect 94 0 47 0;
-#X connect 94 0 125 3;
+#X connect 94 0 129 0;
 #X connect 95 0 97 1;
 #X connect 96 0 97 1;
 #X connect 97 0 43 0;
@@ -250,3 +251,4 @@ bolstick_sounds/zulu/groove.wav bolstick_sounds/zulu/melodic.wav;
 #X connect 126 0 95 0;
 #X connect 127 0 114 0;
 #X connect 128 0 121 1;
+#X connect 129 0 125 3;
