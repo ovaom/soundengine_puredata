@@ -1,4 +1,4 @@
-#N canvas 214 28 1466 910 10;
+#N canvas 88 60 1466 910 10;
 #X text 673 176 ON;
 #X text 608 176 OFF;
 #X obj 652 175 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -171,6 +171,7 @@ bolstick_sounds/zulu/hululement/hulul_end.wav;
 #X obj 554 1005 i;
 #X obj 466 951 +~;
 #X obj 554 981 * 4;
+#X obj 225 902 *~ 4;
 #X connect 2 0 14 0;
 #X connect 3 0 13 0;
 #X connect 5 0 37 0;
@@ -294,7 +295,7 @@ bolstick_sounds/zulu/hululement/hulul_end.wav;
 #X connect 141 0 146 1;
 #X connect 142 0 146 0;
 #X connect 145 0 124 0;
-#X connect 146 0 153 0;
+#X connect 146 0 155 0;
 #X connect 147 0 145 1;
 #X connect 151 0 150 0;
 #X connect 151 0 154 0;
@@ -302,3 +303,4 @@ bolstick_sounds/zulu/hululement/hulul_end.wav;
 #X connect 153 0 145 0;
 #X connect 154 0 148 0;
 #X connect 154 0 152 0;
+#X connect 155 0 153 0;

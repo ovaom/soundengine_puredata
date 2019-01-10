@@ -1,4 +1,4 @@
-#N canvas 148 64 1532 921 10;
+#N canvas 147 70 1532 921 10;
 #X text 706 155 ON;
 #X text 641 155 OFF;
 #X obj 685 154 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -150,7 +150,7 @@
 -1 -1 98 1;
 #X floatatom 1758 1177 5 0 0 0 - - -, f 5;
 #X obj 1350 996 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 1098 1;
+-1 -1 1398 1;
 #X floatatom 1347 1017 5 0 0 0 - - -, f 5;
 #X obj 498 983 loadbang;
 #X obj 469 1054 *~;
@@ -159,7 +159,6 @@
 #X floatatom 525 1060 5 0 0 0 - - -, f 5;
 #X msg 498 1010 1;
 #X msg 1731 1127 0.02;
-#X msg 1309 975 0.224;
 #X obj 1004 576 r \$0-state;
 #X obj 938 576 spigot 1;
 #X obj 869 543 r \$0-off;
@@ -176,9 +175,8 @@
 #X obj 899 1005 loadbang;
 #X obj 870 1076 *~;
 #X obj 929 1061 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2097 1;
+-1 -1 1000 1;
 #X floatatom 926 1082 5 0 0 0 - - -, f 5;
-#X msg 899 1032 0.428;
 #X obj 538 542 r \$0-preset1;
 #X obj 938 542 r \$0-preset2;
 #X obj 1354 533 r \$0-preset3;
@@ -188,6 +186,9 @@
 #X obj 1300 1064 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 1320 1065 r \$0-param0OK;
+#X obj 870 956 /~ 2;
+#X msg 1309 975 0.285;
+#X msg 899 1032 0.204;
 #X connect 2 0 17 0;
 #X connect 3 0 16 0;
 #X connect 5 0 134 0;
@@ -268,7 +269,7 @@
 #X connect 113 0 112 0;
 #X connect 113 1 119 0;
 #X connect 115 0 14 0;
-#X connect 116 0 146 0;
+#X connect 116 0 170 0;
 #X connect 118 0 125 0;
 #X connect 119 0 118 1;
 #X connect 120 0 106 0;
@@ -302,24 +303,25 @@
 #X connect 144 0 142 0;
 #X connect 145 0 88 1;
 #X connect 145 0 136 0;
-#X connect 146 0 115 1;
-#X connect 146 0 138 0;
-#X connect 147 0 148 1;
+#X connect 146 0 147 1;
+#X connect 147 0 149 0;
 #X connect 148 0 150 0;
-#X connect 149 0 151 0;
-#X connect 150 0 151 0;
-#X connect 151 0 159 0;
-#X connect 153 0 152 0;
-#X connect 153 0 151 1;
-#X connect 156 0 155 0;
-#X connect 156 0 151 2;
-#X connect 158 0 162 0;
-#X connect 159 0 14 0;
-#X connect 160 0 161 0;
-#X connect 161 0 159 1;
-#X connect 162 0 159 1;
-#X connect 162 0 160 0;
-#X connect 163 0 28 0;
-#X connect 164 0 148 0;
-#X connect 165 0 107 0;
-#X connect 170 0 169 0;
+#X connect 149 0 150 0;
+#X connect 150 0 169 0;
+#X connect 152 0 151 0;
+#X connect 152 0 150 1;
+#X connect 155 0 154 0;
+#X connect 155 0 150 2;
+#X connect 157 0 171 0;
+#X connect 158 0 14 0;
+#X connect 159 0 160 0;
+#X connect 160 0 158 1;
+#X connect 161 0 28 0;
+#X connect 162 0 147 0;
+#X connect 163 0 107 0;
+#X connect 168 0 167 0;
+#X connect 169 0 158 0;
+#X connect 170 0 115 1;
+#X connect 170 0 138 0;
+#X connect 171 0 158 1;
+#X connect 171 0 159 0;
