@@ -1,4 +1,4 @@
-#N canvas 0 93 1680 957 10;
+#N canvas 0 28 1680 957 10;
 #X declare -path abs/grelot_sounds;
 #X declare -path abs/ocarina_sounds;
 #X declare -path abs/corail_sounds;
@@ -271,19 +271,19 @@
 #X obj 80 534 *~;
 #X obj 85 451 loadbang;
 #X obj 112 502 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 1400 1;
+-1 -1 0 1;
 #X obj 260 534 *~;
 #X obj 275 457 loadbang;
 #X obj 288 506 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2300 1;
+-1 -1 0 1;
 #X obj 380 534 *~;
 #X obj 395 459 loadbang;
 #X obj 407 508 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 1900 1;
+-1 -1 0 1;
 #X obj 491 536 *~;
 #X obj 510 454 loadbang;
 #X obj 524 512 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2100 1;
+-1 -1 0 1;
 #X msg 529 700 \$1 100;
 #X msg 733 735 \$1 100;
 #X obj 307 367 SD-bolstickv3;
@@ -297,7 +297,7 @@
 #X floatatom 549 542 5 0 0 0 - - -, f 5;
 #X msg 275 481 0.469;
 #X obj 925 374 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2800 1;
+-1 -1 0 1;
 #X floatatom 922 399 5 0 0 0 - - -, f 5;
 #X obj 856 380 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
