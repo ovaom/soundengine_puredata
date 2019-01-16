@@ -1,4 +1,4 @@
-#N canvas 58 59 1619 938 10;
+#N canvas 58 47 1619 938 10;
 #X text 822 235 ON;
 #X text 757 235 OFF;
 #X obj 801 234 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -6,10 +6,10 @@
 #X obj 735 235 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 1175 192 hsl 100 15 127 60 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 5249 1;
+-262144 -1 -1 0 1;
 #X floatatom 1283 193 5 0 0 0 - - -, f 5;
 #X obj 1351 193 hsl 100 15 0 50 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 5070 1;
+-1 -1 0 1;
 #X floatatom 1461 194 5 0 0 0 - - -, f 5;
 #X text 734 21 HARDWARE CONTROLS;
 #X obj 187 32 inlet datas;
@@ -28,10 +28,10 @@
 #X text 549 153 button2;
 #X text 458 153 button1;
 #X obj 1521 193 hsl 100 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 9900 1;
+-1 -1 0 1;
 #X floatatom 1630 193 5 0 0 0 - - -, f 5;
 #X obj 1172 217 s \$0-lowpass;
-#X obj 651 1000 s~ \$0-audio;
+#X obj 346 1019 s~ \$0-audio;
 #X obj 656 1209 noise~;
 #X obj 443 1309 +~;
 #X text 700 1095 NOISE;
@@ -54,7 +54,7 @@
 #X text 622 1419 q;
 #X floatatom 601 1438 5 0 0 0 - - -, f 5;
 #X obj 441 1422 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 9148 1;
+-1 -1 12700 1;
 #X obj 438 1395 r \$0-lowpass;
 #X obj 1172 143 m_scale 0 1 127 60;
 #X obj 1032 1539 pack 0 1000;
@@ -104,7 +104,7 @@
 #X obj 1417 72 r \$0-state;
 #X obj 1518 71 spigot 0;
 #X obj 1584 71 r \$0-state;
-#X obj 651 950 VI-wavePlayer-mono;
+#X obj 346 969 VI-wavePlayer-mono;
 #X obj 35 456 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 176 456 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -141,9 +141,9 @@
 #X obj 931 61 r \$0-preset;
 #X obj 951 114 print new preset;
 #X obj 931 199 s \$0-newPreset;
-#X obj 448 661 spigot 1;
-#X obj 323 628 r \$0-off;
-#X msg 663 872 1;
+#X obj 143 680 spigot 1;
+#X obj 18 647 r \$0-off;
+#X msg 358 891 1;
 #X text 18 25 INIT;
 #X obj 18 53 loadbang;
 #X obj 17 129 s \$0-lowpass;
@@ -156,13 +156,13 @@
 #X obj 359 105 pipe 5;
 #X obj 448 105 pipe 5;
 #X obj 537 105 pipe 5;
-#X obj 747 651 spigot 1;
-#X obj 1054 648 spigot 1;
+#X obj 442 670 spigot 1;
+#X obj 749 667 spigot 1;
 #X obj 366 1476 e_lop2 1000 2;
 #X obj 410 1447 mtof;
-#X obj 514 661 r \$0-state;
-#X obj 815 652 r \$0-state;
-#X obj 1120 648 r \$0-state;
+#X obj 209 680 r \$0-state;
+#X obj 510 671 r \$0-state;
+#X obj 815 667 r \$0-state;
 #X obj 552 1791 *~;
 #X obj 673 1703 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
@@ -186,24 +186,19 @@
 #X obj 1009 1676 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X msg 944 1674 0;
-#X obj 448 627 r \$0-preset1;
-#X obj 747 617 r \$0-preset2;
-#X obj 1054 614 r \$0-preset3;
-#X obj 641 1647 r \$0-preset1;
-#X obj 737 1647 r \$0-preset2;
-#X obj 834 1647 r \$0-preset3;
-#X obj 944 1647 r \$0-preset4;
-#X obj 574 1698 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
-#X floatatom 571 1719 5 0 0 0 - - -, f 5;
-#X msg 544 1674 0;
-#X obj 544 1647 r \$0-preset0;
 #X obj 726 1278 * 0.03;
-#X msg 747 681 hot_tropics/temoin.wav;
-#X msg 1054 674 corail.wav;
-#X msg 477 688 corail_pad_1_121bpm.wav;
+#X msg 442 700 hot_tropics/temoin.wav;
+#X msg 749 693 corail.wav;
+#X msg 172 707 corail_pad_1_121bpm.wav;
 #X msg 641 1673 0.244;
 #X msg 737 1674 0.408;
+#X obj 143 646 r \$0-preset0;
+#X obj 442 636 r \$0-preset1;
+#X obj 749 633 r \$0-preset2;
+#X obj 641 1647 r \$0-preset0;
+#X obj 737 1647 r \$0-preset1;
+#X obj 834 1647 r \$0-preset2;
+#X obj 944 1647 r \$0-preset3;
 #X connect 2 0 19 0;
 #X connect 3 0 18 0;
 #X connect 4 0 5 0;
@@ -222,11 +217,11 @@
 #X connect 29 0 145 0;
 #X connect 31 0 29 1;
 #X connect 32 0 43 0;
-#X connect 32 0 176 0;
+#X connect 32 0 165 0;
 #X connect 34 0 29 0;
 #X connect 35 0 32 0;
 #X connect 35 0 32 1;
-#X connect 37 0 176 0;
+#X connect 37 0 165 0;
 #X connect 38 0 94 0;
 #X connect 42 0 33 0;
 #X connect 42 0 32 0;
@@ -296,7 +291,7 @@
 #X connect 124 0 127 0;
 #X connect 125 0 124 0;
 #X connect 128 0 130 0;
-#X connect 128 0 179 0;
+#X connect 128 0 168 0;
 #X connect 129 0 96 0;
 #X connect 130 0 96 0;
 #X connect 132 0 134 0;
@@ -313,9 +308,9 @@
 #X connect 141 0 13 0;
 #X connect 142 0 20 0;
 #X connect 143 0 130 0;
-#X connect 143 0 177 0;
+#X connect 143 0 166 0;
 #X connect 144 0 130 0;
-#X connect 144 0 178 0;
+#X connect 144 0 167 0;
 #X connect 145 0 53 0;
 #X connect 146 0 145 1;
 #X connect 147 0 128 1;
@@ -332,23 +327,20 @@
 #X connect 161 0 162 0;
 #X connect 163 0 161 0;
 #X connect 164 0 150 1;
-#X connect 165 0 128 0;
-#X connect 166 0 143 0;
-#X connect 167 0 144 0;
-#X connect 168 0 180 0;
-#X connect 168 0 157 0;
-#X connect 169 0 181 0;
-#X connect 169 0 158 0;
-#X connect 170 0 160 0;
-#X connect 170 0 159 0;
-#X connect 171 0 164 0;
-#X connect 171 0 163 0;
-#X connect 172 0 173 0;
-#X connect 174 0 150 1;
-#X connect 175 0 174 0;
-#X connect 176 0 31 1;
-#X connect 177 0 96 1;
-#X connect 178 0 96 1;
-#X connect 179 0 96 1;
-#X connect 180 0 150 1;
-#X connect 181 0 150 1;
+#X connect 165 0 31 1;
+#X connect 166 0 96 1;
+#X connect 167 0 96 1;
+#X connect 168 0 96 1;
+#X connect 169 0 150 1;
+#X connect 170 0 150 1;
+#X connect 171 0 128 0;
+#X connect 172 0 143 0;
+#X connect 173 0 144 0;
+#X connect 174 0 169 0;
+#X connect 174 0 157 0;
+#X connect 175 0 170 0;
+#X connect 175 0 158 0;
+#X connect 176 0 160 0;
+#X connect 176 0 159 0;
+#X connect 177 0 164 0;
+#X connect 177 0 163 0;

@@ -101,10 +101,10 @@
 #X msg 1371 190 \$1 150;
 #X msg 1522 190 \$1 150;
 #X obj 584 219 s \$0-innerState;
-#X obj 638 895 r \$0-press0;
-#X obj 667 918 r \$0-press1;
-#X obj 697 942 r \$0-press2;
-#X obj 727 967 r \$0-press3;
+#X obj 325 901 r \$0-press0;
+#X obj 354 924 r \$0-press1;
+#X obj 384 948 r \$0-press2;
+#X obj 414 973 r \$0-press3;
 #X obj 857 91 valueChanged;
 #X obj 857 64 r \$0-preset;
 #X obj 877 117 print new preset;
@@ -114,54 +114,54 @@
 #X obj 1371 119 valueChanged;
 #X obj 1522 119 valueChanged;
 #X obj 666 83 valueChanged;
-#X obj 375 734 pack s s s s s;
-#X msg 375 658 ocarina_sounds/swedish/voxpitch0.wav ocarina_sounds/swedish/voxpitchMinus12.wav
+#X obj 62 740 pack s s s s s;
+#X msg 62 664 ocarina_sounds/swedish/voxpitch0.wav ocarina_sounds/swedish/voxpitchMinus12.wav
 ocarina_sounds/swedish/voxpitchMinus7.wav ocarina_sounds/swedish/voxpitchPlus5.wav
 ocarina_sounds/swedish/voxpitchPlus7.wav;
-#X obj 700 729 pack s s s s s;
-#X obj 1099 729 pack s s s s s;
-#X msg 1099 653 ocarina_sounds/doubidoo/doubidou35-Vibes1Soft.wav ocarina_sounds/doubidoo/doubidou36-KontaktPortablex64.wav
+#X obj 387 735 pack s s s s s;
+#X obj 786 735 pack s s s s s;
+#X msg 786 659 ocarina_sounds/doubidoo/doubidou35-Vibes1Soft.wav ocarina_sounds/doubidoo/doubidou36-KontaktPortablex64.wav
 ocarina_sounds/doubidoo/doubidou38-KontaktPortablex64.wav ocarina_sounds/doubidoo/doubidou39-KontaktPortablex64.wav
 ocarina_sounds/doubidoo/doubidou40-KontaktPortablex64.wav;
-#X msg 700 653 ocarina_sounds/marimbarp/marimbarp2.wav ocarina_sounds/marimbarp/marimbarp1.wav
+#X msg 387 659 ocarina_sounds/marimbarp/marimbarp2.wav ocarina_sounds/marimbarp/marimbarp1.wav
 ocarina_sounds/marimbarp/marimbarp3.wav ocarina_sounds/marimbarp/marimbarp4.wav
 ocarina_sounds/marimbarp/marimbarp5.wav;
-#X obj 607 1026 VI-ocarina_wavePlayer-poly;
-#X obj 608 821 r \$0-off;
-#X obj 425 628 spigot 1;
-#X msg 368 631 1;
-#X obj 492 628 r \$0-state;
-#X obj 790 629 spigot 1;
-#X msg 697 631 1;
-#X obj 857 629 r \$0-state;
-#X obj 1161 622 spigot 1;
-#X msg 1099 625 1;
-#X obj 1228 622 r \$0-state;
-#X obj 925 1140 *~;
-#X obj 956 1052 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+#X obj 294 1032 VI-ocarina_wavePlayer-poly;
+#X obj 295 827 r \$0-off;
+#X obj 112 634 spigot 1;
+#X msg 55 637 1;
+#X obj 179 634 r \$0-state;
+#X obj 477 635 spigot 1;
+#X msg 384 637 1;
+#X obj 544 635 r \$0-state;
+#X obj 848 628 spigot 1;
+#X msg 786 631 1;
+#X obj 915 628 r \$0-state;
+#X obj 612 1146 *~;
+#X obj 643 1058 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
-#X floatatom 951 1073 5 0 0 0 - - -, f 5;
-#X obj 1050 1047 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+#X floatatom 638 1079 5 0 0 0 - - -, f 5;
+#X obj 737 1053 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
-#X floatatom 1047 1068 5 0 0 0 - - -, f 5;
-#X obj 1147 1047 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+#X floatatom 734 1074 5 0 0 0 - - -, f 5;
+#X obj 834 1053 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
-#X floatatom 1144 1068 5 0 0 0 - - -, f 5;
-#X obj 987 1022 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X floatatom 831 1074 5 0 0 0 - - -, f 5;
+#X obj 674 1028 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 1082 1022 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 769 1028 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 854 1019 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 541 1025 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X msg 924 1023 0.244;
-#X msg 1020 1023 0.183;
-#X msg 1117 1023 0.265;
-#X obj 374 604 r \$0-preset1;
-#X obj 700 608 r \$0-preset2;
-#X obj 1098 600 r \$0-preset3;
-#X obj 924 996 r \$0-preset1;
-#X obj 1020 996 r \$0-preset2;
-#X obj 1117 996 r \$0-preset3;
+#X msg 611 1029 0.244;
+#X msg 707 1029 0.183;
+#X msg 804 1029 0.265;
+#X obj 61 610 r \$0-preset0;
+#X obj 387 614 r \$0-preset1;
+#X obj 785 606 r \$0-preset2;
+#X obj 611 1002 r \$0-preset0;
+#X obj 707 1002 r \$0-preset1;
+#X obj 804 1002 r \$0-preset2;
 #X connect 3 0 21 0;
 #X connect 4 0 3 0;
 #X connect 6 0 21 0;
