@@ -306,6 +306,7 @@
 #X msg 510 478 0.428;
 #X msg 847 400 0.571;
 #X msg 85 475 0.29;
+#X text 1160 496 blablab;
 #X connect 2 0 3 0;
 #X connect 2 0 0 0;
 #X connect 4 0 18 0;
